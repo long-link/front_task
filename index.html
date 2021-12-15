@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>long subtraction</title>
+	<style>
+		.container {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+		.long-calc {
+			display: flex;
+			padding: 20px;
+			border: 1px solid #c7c7c7;
+			flex-direction: column;
+			width: 720px;
+		}
+		.long-calc_instruction {
+			text-align: center;
+		}
+		.long-calc_main-title p {
+			font-size: 20px;
+    		font-weight: bold;
+			margin: 0;
+			color: #c7c7c7;
+		} 
+		.row {
+			display: flex;
+			justify-content: flex-end;
+		}
+		.row_title {
+			margin-right: 20px;
+			color: #c7c7c7;
+		}
+		.row_input {
+			display: flex;
+			align-items: center;
+			flex-basis: 80%;
+		}
+		.row_input__text { 
+			width: 100%;
+			border: 1px solid #c7c7c7;
+			text-align: end;
+		}
+		.row_input__text::-webkit-inner-spin-button { 
+			-webkit-appearance: none;
+  			margin: 0;
+		}
+		.row_input__text[type='number'] {
+    		-moz-appearance: textfield;
+		}
+		.row_input__text:focus {
+			outline: 0;
+		}
+		.row_symbol {
+    		font-family: fantasy;
+			color: #3500c5;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="long-calc">
+			<div class="long-calc_main-title">
+				<p>Вычитание длинных чисел</p>
+			</div>
+			<div class="row">
+				<div class="row_title">
+					<p>Первое число</p>
+				</div>
+				<div class="row_input">
+					<input class="row_input__text" id="firstNumber" name="first" maxlength="256" type="number"/> 
+				</div>
+			</div>
+			<div class="row">
+				<div class="row_symbol">-</div>
+			</div>
+			<div class="row">
+				<div class="row_title">
+					<p>Первое число</p>
+				</div>
+				<div class="row_input">
+					<input class="row_input__text" id="secondNumber" name="second" maxlength="256" type="number"/> 
+				</div>
+			</div>
+			<div class="row">
+				<div class="row_symbol">=</div>
+			</div>
+			<div class="row">
+				<div class="row_title">
+					<p>Результат</p>
+				</div>
+				<div class="row_input">
+					<input class="row_input__text" id="subResult" name="result" type="text" readonly/>
+				</div>
+			</div>		
+		</div>
+		<div class="long-calc_instruction">
+			<h1>Инструкция</h1>
+			<P>Чтобы посчитать разничу между числами введите их в соответствующие поля и получите результат.</P>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
